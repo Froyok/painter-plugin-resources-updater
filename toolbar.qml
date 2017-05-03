@@ -8,7 +8,7 @@ import AlgWidgets.Style 1.0
 Row
 {
 	property var windowReference : null
-
+	
 	Button
 	{
 		id: rect
@@ -19,17 +19,16 @@ Row
 
 		Rectangle
 		{
-			anchors.fill: parent
+			width: parent.width
+			height: parent.height
 			color: rect.hovered ? "#424242" : "#141414"
 			
 			Image
 			{
-				anchors.fill: parent
-				anchors.margins: 3
 				source: "icon.svg"
 				fillMode: Image.PreserveAspectFit
-				sourceSize.width: width
-				sourceSize.height: height
+				width: parent.width
+				height: parent.height
 				mipmap: true
 			}
 		}
